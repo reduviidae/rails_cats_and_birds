@@ -1,5 +1,11 @@
 <h1>Cat Info for <%= @cat.name %></h1> <br>
 <%= @cat.age %> <br>
 <%= @cat.breed %> <br>
+<h5>Birds caught by cat:</h5>
+<% @cat.birds.each do |bird| %>
+  <ul>
+    <li><%= bird.name %></li>
+  </ul>
+<% end %>
 
-<%= button_to "delete", @cat, :method => :delete %> 
+<%= button_to "delete", @cat, :method => :delete %>

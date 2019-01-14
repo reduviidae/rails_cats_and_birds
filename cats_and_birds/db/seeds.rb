@@ -10,3 +10,8 @@ Cat.destroy_all
 Cat.create(name: "Maru", age: 1, breed: "scottish fold")
 Cat.create(name: "Hannah", age: 2, breed: "tabby")
 Cat.create(name: "Adelina", age: 14, breed: "persian")
+
+Bird.destroy_all
+
+Bird.create(name: "Birdo", cat_id: Cat.find_by(name: "Adelina").id)
+Bird.create(name: "Chirpy", cat_id: Cat.find_by(name: "Adelina").id)

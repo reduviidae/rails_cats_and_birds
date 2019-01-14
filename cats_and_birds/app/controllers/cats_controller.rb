@@ -2,9 +2,11 @@ class CatsController < ApplicationController
   before_action :find_cat, only: [:show, :edit, :update, :destroy]
   def index
     @cats = Cat.all
+    @birds = Bird.all
   end
 
   def show
+
   end
 
   def new
